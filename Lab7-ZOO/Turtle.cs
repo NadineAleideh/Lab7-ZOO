@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab7_ZOO
 {
     // Concrete class for turtles (inherits from Reptile)
-    public class Turtle : Reptile
+    public class Turtle : Reptile , IClimb //the turtle has 1 interfaces IClimb
     {
         // Concrete property
         public override string SkinColor { get; set; }
@@ -44,6 +44,12 @@ namespace Lab7_ZOO
         public override string Eat()
         {
             return "The turtle eats plants and small aquatic creatures.";
+        }
+
+        //<IClimb> Interface method MightClimb() implementation
+        public string MightClimb()
+        {
+            return "I can climb Trees!";
         }
     }
 }

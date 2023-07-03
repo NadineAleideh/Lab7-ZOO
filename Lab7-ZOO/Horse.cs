@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab7_ZOO
 {
     // Concrete class for horses (inherits from Mammal)
-    public class Horse : Mammal
+    public class Horse : Mammal ,IAttack, IClimb //the hores has 2 interfaces IAttack, IClimb
     {
         // Concrete property
         public override string FurColor { get; set; }
@@ -38,6 +38,18 @@ namespace Lab7_ZOO
         public override string Eat()
         {
             return "The horse is eating hay.";
+        }
+
+        //<IAttack> Interface method MightAttack() implementation
+        public string MightAttack()
+        {
+            return "If I'm afraid of you, I may kick or fight back as a defense!";
+        }
+
+        //<IClimb> Interface method MightClimb() implementation
+        public string MightClimb()
+        {
+            return "I can climb up and down stairs. Also, mountains!";
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab7_ZOO
 {
     // Concrete class for dogs (inherits from DomesticatedMammal)
-    public class Dog : DomesticatedMammal
+    public class Dog : DomesticatedMammal, IAttack //the dog has 1 interfaces IAttack
     {
         // Concrete property
         public override string FurColor { get; set; }
@@ -43,6 +43,12 @@ namespace Lab7_ZOO
         public override string Eat()
         {
             return "The dog is eating dog food.";
+        }
+
+        //<IAttack> Interface method MightAttack() implementation
+        public string MightAttack()
+        {
+            return "If I feel threatened, guarding my food I may attack as a defense!";
         }
     }
 }
